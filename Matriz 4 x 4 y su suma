@@ -1,0 +1,54 @@
+#include <stdio.h> // biblioteca de Entrada y Salida, contiene definiciones de
+macros, y las constantes //
+#include <stdlib.h> // biblioteca estándar o archivo de cabecera que permite
+propósito general del lengauje //
+#include <math.h> // biblioteca diseñada pata las operaciones matemáticas básicas//
+int main()
+{
+int matriz[4][4]; // declaración de tamaño de matriz//
+int horizontal[4]; //vector horizontal//
+int vertical[4]; //vector vertical//
+int fila,columna; //vectores fila y columna//
+int suma=0; // suma de vectores de fila y columna//
+int i;
+/*Bucle que registra los numeros introducidos de teclado*/
+for(fila=0;fila<4;fila++)
+{
+for(columna=0;columna<4;columna++)
+printf("Introduce un numero para la posicion %d,%d: ",fila,columna);
+scanf("%d",&matriz[fila][columna]);
+}
+}
+
+/*Bucle que suma las filas y registra el resultado en el vector vertical*/
+for(fila=0;fila<4;fila++)
+{
+suma=0;
+for(columna=0;columna<4;columna++)
+{
+suma+=matriz[fila][columna];
+}
+vertical[fila]=suma;
+}
+/*Recorre el vector vertical y muestra los resultados*/
+for(i=0;i<4;i++)
+{
+printf("%d\n",vertical[i]);
+}
+/*Bucle que suma las columnas y registra el resultado en el vector horizontal*/
+for(columna=0;columna<4;columna++)
+{
+suma=0;
+for(fila=0;fila<4;fila++)
+{
+suma+=matriz[fila][columna];
+}
+horizontal[columna]=suma;
+}
+/*Recorre el vector horizontal y muestra los resultados*/
+for(i=0;i<4;i++)
+{
+printf("%d",horizontal[i]);
+}
+return 0; // devolver valor//
+}
