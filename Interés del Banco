@@ -1,0 +1,21 @@
+include <stdio.h> #include <conio.h> #include <math.h> 
+
+int main(){ 
+
+int inter, tot,d; 
+
+printf("¨Cuanto dinero tienes ingresado? "); scanf("%d", &d); 
+
+inter=d*0.035; 
+
+printf("\nTu interes es de: %d", inter); printf(" dolares"); 
+
+tot=d+inter; 
+
+printf("\n\t Tu total es de: %d",tot); printf(" dolares"); 
+
+getch(); 
+
+} 
+
+ 
