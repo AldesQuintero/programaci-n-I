@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <iostream>
+main()
+{
+system("color 2E");{
+printf("\t\tEn el siguiente codigo se muestra el avance de poblacion considerando que
+a partir de 1980 la poblacion aumenta un 5 porciento al a¤o\n\n");
+}
+int i=120,a=1980; /*Valor Inicial*/
+while(i<=205) /*Mientras i sea menor o igual a 205*/
+{
+system("color 5A");
+printf("%d\t", i);/*Imprimir el valor de i*/
+i+=6;/*Aumentar el contador en 6*/
+}
+printf("\n\n El incremento de poblacion llego a: %d millones de habitantes\n\n",i=204);
+while(a<=1994){
+printf("%d\t",a);
+a+=1;
+}
+printf("\n\n Los a¤os transcurridos se muestran arriba, el a¤o actual es: %d ",a=1994);
+getch();
+return 0;
+}
