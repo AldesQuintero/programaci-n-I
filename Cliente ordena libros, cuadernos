@@ -1,0 +1,93 @@
+#include <stdlib.h> 
+
+ 
+
+int main (void) 
+
+{ 
+
+int tipo_de_pago; 
+
+float cantidad_de_libros, cantidad_de_discos, cantidad_de_cuadernos, descuento, precio_por_cuaderno; 
+
+float precio_por_libro, precio_por_disco, subtotal, total; 
+
+printf ("Ingrese el valor de cantidad de libros: "); 
+
+scanf ("%f", &cantidad_de_libros); 
+
+(void) getchar (); 
+
+printf ("Ingrese el valor de cantidad de discos: "); 
+
+scanf ("%f", &cantidad_de_libros); 
+
+(void) getchar (); 
+
+printf ("Ingrese el valor de cantidad de cuadernos: ");   
+
+scanf ("%f", &cantidad_de_cuadernos); 
+
+(void) getchar (); 
+
+printf ("Ingrese el valor de precio por libro: "); 
+
+scanf ("%f", &precio_por_libro); 
+
+(void) getchar (); 
+
+printf ("Ingrese el valor de precio por disco: "); 
+
+scanf ("%f", &precio_por_disco); 
+
+(void) getchar (); 
+
+printf ("Ingrese el valor de precio por cuaderno: "); 
+
+scanf ("%f", &precio_por_cuaderno); 
+
+(void) getchar (); 
+
+subtotal=cantidad_de_libros*precio_por_libro+cantidad_de_discos*precio_por_disco+cantidad_de_cuadernos*precio_por_cuaderno; 
+
+descuento=cantidad_de_libros*precio_por_libro*0.20+cantidad_de_discos*precio_por_disco*0.15+cantidad_de_cuadernos*precio_por_cuaderno*0.1; 
+
+printf ("Seleccione el valor de tipo de pago.\n"); 
+
+printf ("\t1.- C\n"); 
+
+printf ("\t2.- Con \n"); 
+
+printf ("\t: "); 
+
+do { 
+
+scanf ("%d", &tipo_de_pago); 
+
+(void) getchar (); 
+
+if (tipo_de_pago<1||tipo_de_pago>2) 
+
+printf ("Valor incorrecto. Ingr\202selo nuevamente.: "); 
+
+} while (tipo_de_pago<1||tipo_de_pago>2); 
+
+if(tipo_de_pago==2) 
+
+descuento=descuento+subtotal*0.10; 
+
+total=subtotal-descuento; 
+
+printf ("Valor de descuento: %g\n", descuento); 
+
+printf ("Valor de subtotal: %g\n", subtotal); 
+
+printf ("Valor de total: %g\n", total); 
+
+putchar ('\n'); 
+
+system ("pause"); 
+
+return EXIT_SUCCESS; 
+
+} 
