@@ -1,0 +1,34 @@
+ #include <stdio.h>
+ #include <stdlib.h> /* Para usar rand y srand es recomendable para obtener un codigo
+optimo*/
+#include <time.h> /* Para usar time*/
+/*Es posible documentar usando // en vez de */
+#define n 20 /* Define la cantidad de notas a mostrar*/
+
+int main()
+{
+system("color 7D");
+/*Inicializar srand*/
+srand(time(NULL));
+
+/* Arreglo de 20 números enteros*/
+int N[20], i, dfnt = 0, rglr = 0, gd = 0, xclnt=0;
+
+// Llenar y mostrar el arreglo.
+printf("Notas: <<");
+for(i=0; i<n; i++){
+N[i] = rand()%21; // Números aleatorios del 0 al 20 se colocó 21 porque el programa
+cuenta desde 0 como un 1, por tanto mostrará todos los números
+printf("\t |%i| ", N[i]); // Mostrará el número generado o números
+if(N[i] <= 5) dfnt++; // Aquí cuenta los que son menores a 5 o deficientes
+else if(N[i] <= 10) rglr++; //Cuenta los que son regulares
+else if(N[i] <= 15) gd++; //Cuenta los que son buenos
+}
+printf(">>\n\n" "Deficientes: %i\n" "Regulares: %i\n"
+"Buenos: %i\n" "Excelentes: %i\n", //En esta parte ya va a imprimir los numeros acorde a
+su evaluación y aleatorios
+dfnt, rglr, gd, 20-dfnt-rglr-gd)
+
+system("pause");
+return 0;
+}
