@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <conio.h>
+main (){
+int p, num;
+char resp='s';
+clrscr();
+p=1;
+printf("Escribe un numero ");
+scanf("%d",&num);
+while(resp=='s'){
+p=p*num;
+printf("\n Escribe otro numero ");
+scanf("%d %c",&num,&resp);
+}
+printf(" \nEl total de la multiplicacion es: %d ",p);
+getch();
+return 0;
+}
