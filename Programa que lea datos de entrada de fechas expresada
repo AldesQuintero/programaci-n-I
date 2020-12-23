@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main (void)
+{
+ int anno, anno_siguiente, dia, dia_siguiente, mes;
+ int mes_siguiente;
+ printf ("Ingrese el valor de anno: ");
+ scanf ("%d", &anno);
+ (void) getchar ();
+ printf ("Ingrese el valor de dia: ");
+ scanf ("%d", &dia);
+ (void) getchar ();
+ printf ("Ingrese el valor de mes: ");
+ scanf ("%d", &mes);
+ (void) getchar ();
+
+if((dia==30&&(mes==4||mes==6||mes==9||mes==11))||dia==31||(mes==2&&(dia==29||
+(dia==28&&(anno%4!=0||anno%100==0)&&anno%400!=0))))
+ {
+ dia_siguiente=1;
+ mes_siguiente=mes+1;
+ }
+ else
+ {
+ dia_siguiente=dia+1;
+ mes_siguiente=mes;
+ }
+ if(mes_siguiente==13)
+ {
+ anno_siguiente=anno+1;
+ mes_siguiente=1;
+ }
+ else
+ anno_siguiente=anno;
+
+if(dia<1||dia>31||(mes==2&&dia>29)||((mes==4||mes==6||mes==9||mes==11)&&dia==
+31)||(mes==2&&dia==29&&(anno%4!=0||anno%100==0)&&anno%400!=0))
+ {
+ dia_siguiente=0;
+ mes_siguiente=0;
+ anno_siguiente=0;
+ printf ("D\241a incorrecto\n");
+ }
+ if(mes<1||mes>12)
+ {
+ dia_siguiente=0;
+ mes_siguiente=0;
+ anno_siguiente=0;
+ printf ("Mes incorrecto\n");
+ }
+ if(anno<1000||anno>=10000)
+ {
+ dia_siguiente=0;
+ mes_siguiente=0;
+ anno_siguiente=0;
+ printf ("A\244o incorrecto\n");
+ }
+ printf ("Valor de anno siguiente: %d\n", anno_siguiente);
+ printf ("Valor de dia siguiente: %d\n", dia_siguiente);
+ printf ("Valor de mes siguiente: %d\n", mes_siguiente);
+ putchar ('\n');
+ system ("pause");
+ return EXIT_SUCCESS;
+}
