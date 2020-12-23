@@ -1,0 +1,53 @@
+#include<stdio.h> 
+
+#include<math.h> 
+
+#include<conio.h> 
+
+ 
+
+int main(){  
+
+int terrenoA, terrenoB, ladoa, ladob, costoa, costob; 
+
+printf("Ingrese el tama¤o del lado A "); 
+
+scanf("%d",&ladoa); 
+
+printf("Ingrese el costo del lado A "); 
+
+scanf("%d",&costoa); 
+
+printf("Ingrese el tama¤o del lado B "); 
+
+scanf("%d",&ladob); 
+
+printf("Ingrese el costo del lado B "); 
+
+scanf("%d",&costob); 
+
+terrenoA=(ladoa*ladoa)*costoa; 
+
+terrenoB=(ladob*ladob)*costob; 
+
+if(terrenoA<terrenoB){ 
+
+printf("El terreno A tiene un costo de: %d, es menor que el costo del terreno B con un valor de: %d",terrenoA,terrenoB); 
+
+printf("\nLe conviene carnal :)"); 
+
+}else{ 
+
+}if(terrenoB<terrenoA){ 
+
+printf("El terreno B tiene un costo de: %d, es menor que el costo del terreno A con un valor de: %d",terrenoB,terrenoA); 
+
+printf("\nLe conviene carnal :)"); 
+
+}else{ 
+
+}if (terrenoA==terrenoB){ 
+
+printf("Ambos terrenos valen lo mismo"); 
+
+} 
