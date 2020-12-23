@@ -1,0 +1,13 @@
+#include <stdio.h>
+main()
+{
+ float gal,p,x;
+printf("\nDame la gasolina en galones: ");
+scanf("%f",&gal);
+printf("\nDame el precio de la gasolina en litros: ");
+scanf("%f",&p);
+x=(gal*3.78)*(0.717);
+printf("\nEl total de la gasolina es: %f2",x);
+getch(0);
+return 0;
+}
