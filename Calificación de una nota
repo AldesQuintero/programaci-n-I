@@ -1,0 +1,59 @@
+#include<stdio.h> 
+
+#include<math.h> 
+
+#include<conio.h> 
+
+ 
+
+int main (){ 
+
+int n, NOTA; 
+
+char nom[30]; 
+
+printf("Hola, escribe tu nombre: "); 
+
+scanf("%s",nom); 
+
+printf("%s,ANOTE AQUI SU NOTA ",nom); 
+
+scanf("%d",&n); 
+
+NOTA=n; 
+
+if(NOTA>=0 && NOTA<50){ 
+
+printf("Usted esta SUSPENDIDO."); 
+
+}else{ 
+
+}if(NOTA>=50 && NOTA<65){ 
+
+printf("Usted ha APROBADO"); 
+
+}else{ 
+
+}if(NOTA>=65 && NOTA<85){ 
+
+printf("Usted es un Alumno NOTABLE"); 
+
+}else{ 
+
+}if(NOTA>=85 && NOTA<100){ 
+
+printf("Usted es un Alumno SOBRESALIENTE"); 
+
+}else{ 
+
+}if(NOTA>=100){ 
+
+printf("Usted %s, es MATRICULA DE HONOR",nom); 
+
+printf("\n FELICIDADES :)"); 
+
+}else{ 
+
+}				 
+
+} 
