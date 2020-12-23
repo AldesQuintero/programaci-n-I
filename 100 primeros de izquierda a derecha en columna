@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main (int argc,char*argv[])
+{
+int x,y,suma,numeros[11][10];
+for (y=0;y<10;y++)
+{
+suma=0;
+for (x=0;x<10;x++)
+{
+numeros[x][y]=(x*10)+1+y;
+suma=suma+numeros[x][y];
+}
+numeros[10][y]=suma;
+}
+for (x=0;x<11;x++)
+{
+for (y=0;y<10;y++)
+{
+printf("%d",numeros[x][y]);
+}
+printf("\n");
+}
+system("pause");
+return 0;
+}
