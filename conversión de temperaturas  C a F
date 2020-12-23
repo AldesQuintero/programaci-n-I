@@ -1,0 +1,11 @@
+#include <stdio.h> 
+
+#include <conio.h> #include <math.h> int main(){ 
+
+int grad,temp; 
+
+printf("¨Cual es tu temperatura? "); scanf("%d", &grad); printf("Colocaste: %d",grad); printf(" grados Centigrados"); temp=(grad*1.8+32); 
+
+printf("\n\tTu temperatura son: %d",temp); printf(" grados Fahrenheit"); 
+
+getch(); 
