@@ -1,0 +1,207 @@
+#include <iostream> 
+
+#include <conio.h> 
+
+#include <stdlib.h> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+    int cuenta,cuenta2,cantidad; 
+
+    float precio1,precio2,precio3,subtotal,descuento,descuento2,total; 
+
+    char cont; 
+
+ 
+
+    do 
+
+    { 
+
+        system("cls"); 
+
+        cout<<"\nCuantos trajes desea comprar? "; 
+
+        cin>>cantidad; 
+
+        cout<<"\n-----------------------------------------------------\n"; 
+
+        cuenta = 1; 
+
+        cuenta2 = 1; 
+
+        subtotal = 0; 
+
+        descuento = 0; 
+
+        descuento2 = 0; 
+
+ 
+
+        while(cuenta <= cantidad) 
+
+        { 
+
+            if(cuenta2 == 1) 
+
+            { 
+
+                cout<<"\nIntroduzca el precio del traje "<<cuenta<<" : "; 
+
+                cin>>precio1; 
+
+ 
+
+                subtotal = subtotal + precio1; 
+
+ 
+
+                descuento = descuento; 
+
+ 
+
+                total = subtotal - descuento; 
+
+            } 
+
+ 
+
+            if(cuenta2 == 2) 
+
+            { 
+
+                cout<<"\nIntroduzca el precio del traje "<<cuenta<<" : "; 
+
+                cin>>precio2; 
+
+ 
+
+                subtotal = subtotal + precio2; 
+
+ 
+
+                if(precio1 <= precio2) 
+
+                { 
+
+                    descuento = descuento + precio1/2 ; 
+
+                } 
+
+                if(precio2 < precio1) 
+
+                { 
+
+                    descuento = descuento + precio2/2; 
+
+                } 
+
+ 
+
+                total = subtotal - descuento; 
+
+            } 
+
+ 
+
+            if(cuenta2 == 3) 
+
+            { 
+
+                cout<<"\nIntroduzca el precio del traje "<<cuenta<<" : "; 
+
+                cin>>precio3; 
+
+ 
+
+                subtotal = subtotal + precio3; 
+
+ 
+
+                if(precio1 <= precio2 && precio1 <= precio3) 
+
+                { 
+
+                    descuento = descuento2 + precio1; 
+
+                } 
+
+                if(precio2 < precio1 && precio2 <= precio3) 
+
+                { 
+
+                    descuento = descuento2 + precio2; 
+
+                } 
+
+                if(precio3 < precio1 && precio3 < precio2) 
+
+                { 
+
+                    descuento = descuento2 + precio3; 
+
+                } 
+
+                total = subtotal - descuento; 
+
+            } 
+
+ 
+
+            cuenta++; 
+
+            cuenta2++; 
+
+ 
+
+            if(cuenta2 == 4) 
+
+            { 
+
+                cuenta2 = 1; 
+
+                descuento2 = descuento; 
+
+            } 
+
+ 
+
+        } 
+
+        cout<<"\n-----------------------------------------------------\n"; 
+
+        cout<<"\n\t\t\t\t\tSubtotal  "<<subtotal<<endl; 
+
+        cout<<"\t\t\t\t\tDescuento "<<descuento<<endl; 
+
+        cout<<"\t\t\t\t\tTotal     "<<total<<endl; 
+
+ 
+
+        cout<<"\n\nDesea continuar?(s/n): "<<endl; 
+
+        cin>>cont; 
+
+ 
+
+    } 
+
+ 
+
+    while(cont=='s' || cont=='S'); 
+
+    getch(); 
+
+    return 0; 
+
+ 
+
+} 
