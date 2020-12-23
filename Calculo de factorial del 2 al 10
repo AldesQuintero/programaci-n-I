@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+ int n, i;
+ unsigned long long fact = 1;
+ printf("Introduzca un numero entero: ");
+ scanf("%d", &n);
+ // muestra un error si el usuario ingresa un entero negativo
+ if (n < 0)
+ printf("¡Error! El factorial de un numero negativo no existe.");
+ else {
+ for (i = 1; i <= n; ++i) {
+ fact *= i;
+ }
+ printf("Factorial de %d = %llu", n, fact);
+ }
+ return 0;
+}
