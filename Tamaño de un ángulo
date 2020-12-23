@@ -1,0 +1,57 @@
+#include<stdio.h> 
+
+#include<math.h> 
+
+#include<conio.h> 
+
+ 
+
+int main(){ 
+
+int angulo, grado; 
+
+printf("Ingrese el valor de su angulo "); 
+
+scanf("%d",&angulo); 
+
+grado=angulo; 
+
+if(grado>=0 && grado<90){ 
+
+printf("Su angulo es AGUDO"); 
+
+}else{ 
+
+}if(grado==90){ 
+
+printf("Su angulo es RECTO"); 
+
+}else{ 
+
+}if(grado>90 && grado<180){ 
+
+printf("Su angulo es OBTUSO"); 
+
+}else{ 
+
+}if(grado==180){ 
+
+printf("Su angulo es Llano"); 
+
+}else{ 
+
+}if(grado>=180 && grado<360){ 
+
+printf("Su angulo es CONCAVO"); 
+
+printf("\n FELICIDADES :)"); 
+
+}else{ 
+
+}if(grado<0){ 
+
+printf("No es un angulo valido"); 
+
+} 
+
+} 
