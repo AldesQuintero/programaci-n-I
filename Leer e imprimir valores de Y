@@ -1,0 +1,39 @@
+#include<stdio.h> 
+
+#include<math.h> 
+
+#include<conio.h> 
+
+ 
+
+int main (){ 
+
+int x,y1,y2; 
+
+printf("Este programa tiene la finalidad de encontrar el valor de Y a partir del numero dado en X"); 
+
+printf("\n\tIngrese el valor de X "); 
+
+scanf("%d",&x); 
+
+y1=6+3*x; 
+
+y2=36+x*x; 
+
+if(x<0){ 
+
+printf("Y es igual a:%d",y1); 
+
+}else{ 
+
+}if(x>0){ 
+
+printf("Y es igual a :%d",y2); 
+
+}else{ 
+
+} 
+
+ 
+
+} 
