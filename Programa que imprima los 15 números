@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stlib.h>
+int main()
+{
+ int x; minima;
+
+printf("\n\n\tProgrma que imprima del 15 hasta un numero ingresado por el usuario\n\n\t");
+system("pause");
+system("cls");
+printf("\n\n\tIntroduzca un numero menor menor a 15 ");
+scanf("%d", &minima);
+if(minima>15)
+ }
+ for(x=15, x<minima; x++)
+ printf("\n\n%d", x);
+ system("pause");
+
+ getch();
+
+}
