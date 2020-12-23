@@ -1,0 +1,19 @@
+#include <stdio.h> 
+
+ 
+
+int main() { 
+
+int minutos, segundos; 
+
+ 
+
+printf("Minutos:"); scanf("%d" , &segundos); minutos = segundos /3600; segundos=segundos % 60; 
+
+printf("Equivalen a 60 seg.\n" , segundos); 
+
+ 
+
+} 
+
+ 
