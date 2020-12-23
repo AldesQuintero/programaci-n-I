@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define NFILAS 5
+#define NCOLUMNAS 5
+int main()
+{
+const int TEN = 10;
+ int mat[TEN][TEN];
+ int *mat_ptr = &mat[0][0];
+ int i,j;
+ const char a= ' ';
+ for(i = 40 ; i >=1 ; *(mat_ptr+i) = i, i-- )
+ ;
+ /*for(i = 1 ; i <= TEN/2*TEN ; *(mat_ptr+i) = i, i++ )
+ ;*/
+//for(j = 1 ; j <= TEN/2*TEN ; j++)//
+for(j = 40 ; j >=1 ; j--)
+{
+ if((*(mat_ptr+j))%2==0){
+ printf("%d%c",*(mat_ptr+j),a);
+if(j==2 || j==4 || j==6 || j==8 || j==10)
+ printf("%c",a);
+
+//cout<<*(mat_ptr+i)<<" ";
+ }
+if( 1 ==( (j) % TEN ))
+{
+ printf("\n");
+//cout<<endl;
+}
+}
+}
