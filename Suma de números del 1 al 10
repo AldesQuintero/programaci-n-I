@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+ int i, n, sum=0;
+ /* Límite superior de entrada del usuario */
+ printf("Ingrese el limite superior: ");
+ scanf("%d", &n);
+ /* Encuentra la suma de todos los números */
+ for(i=1; i<=n; i++)
+ {
+ sum += i;
+ }
+ printf("suma de los primeros %d numeros naturales = %d", n, sum);
+ return 0;
+}
